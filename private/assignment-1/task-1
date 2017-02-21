@@ -1,0 +1,63 @@
+// ConsoleApplication1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	// declear both variable for user input
+	int givenAmount; // 5000
+	int shopingAmount; // 273;
+
+	cout << "Enter Total Amount: ";
+	cin >> givenAmount;
+	cout << "Enter Shoping Amount: ";
+	cin >> shopingAmount;
+
+	// count the return amount
+	int returnAmount = givenAmount - shopingAmount;
+
+	int thousandNote = returnAmount / 1000;
+	returnAmount = returnAmount % 1000;
+
+	int fiveCoinhundredNotenNoteote = returnAmount / 500;
+	returnAmount = returnAmount % 500;
+
+	int hundredNote = returnAmount / 100;
+	returnAmount = returnAmount % 100;
+
+	int fiftyNote = returnAmount / 50;
+	returnAmount = returnAmount % 50;
+
+	int twentyNote = returnAmount / 20;
+	returnAmount = returnAmount % 20;
+
+	int tenNote = returnAmount / 10;
+	returnAmount = returnAmount % 10;
+
+	int fiveCoin = returnAmount / 5;
+	returnAmount = returnAmount % 5;
+
+	int twoCoin = returnAmount / 2;
+	returnAmount = returnAmount % 2;
+
+	int oneCoin = returnAmount / 1;
+	returnAmount = returnAmount % 1;
+
+	cout << "Amount to be returned: Rs." << givenAmount - shopingAmount << "\n";
+	cout << "Denomination Details:\n";
+	if (thousandNote){ cout << thousandNote << " note(s) of Rs.1000" << "\n"; }
+	if (fiveCoinhundredNotenNoteote){ cout << fiveCoinhundredNotenNoteote << " note(s) of Rs. 500" << "\n"; }
+	if (hundredNote){ cout << hundredNote << " note(s) of Rs. 100" << "\n"; }
+	if (fiftyNote){ cout << fiftyNote << " note(s) of Rs.  40" << "\n"; }
+	if (twentyNote){ cout << twentyNote << " note(s) of Rs.  10" << "\n"; }
+	if (tenNote){ cout << tenNote << " note(s) of Rs.  10" << "\n"; }
+	if (fiveCoin){ cout << fiveCoin << " coin(s) of Rs.   5" << "\n"; }
+	if (twoCoin){ cout << twoCoin << " coin(s) of Rs.   2" << "\n"; }
+	if (oneCoin){ cout << oneCoin << " coin(s) of Rs.   1" << "\n"; }
+	return 0;
+}
+
